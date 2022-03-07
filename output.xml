@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.10 on darwin)" generated="20220307 00:11:07.504" rpa="false" schemaversion="2">
+<suite id="s1" name="Exercise1 Scenario2" source="/Users/ryanilhams/Documents/Test-WarungPintar/exercise1_scenario2.robot">
+<test id="s1-t1" name="Access a Product via Search">
+<kw name="Given Open eBay website with Chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${eBayURL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220307 00:11:07.921" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20220307 00:11:07.921" endtime="20220307 00:11:13.274"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220307 00:11:13.274" endtime="20220307 00:11:13.472"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:07.920" endtime="20220307 00:11:13.473"/>
+</kw>
+<kw name="When Click Search">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:13.474" level="INFO">Clicking element 'css:#gh-ac-box2 .ui-autocomplete-input'.</msg>
+<status status="PASS" starttime="20220307 00:11:13.474" endtime="20220307 00:11:13.553"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:13.473" endtime="20220307 00:11:13.554"/>
+</kw>
+<kw name="And Input Keyword &quot;Macbook&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchField}</arg>
+<arg>MacBook</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:13.556" level="INFO">Typing text 'MacBook' into text field 'css:#gh-ac-box2 .ui-autocomplete-input'.</msg>
+<status status="PASS" starttime="20220307 00:11:13.555" endtime="20220307 00:11:13.677"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:13.554" endtime="20220307 00:11:13.677"/>
+</kw>
+<kw name="And Click Search Button">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:13.678" level="INFO">Clicking button 'css:#gh-btn'.</msg>
+<status status="PASS" starttime="20220307 00:11:13.678" endtime="20220307 00:11:16.177"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:13.677" endtime="20220307 00:11:16.177"/>
+</kw>
+<kw name="Then Will Show All Search Result Page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${searchResult}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220307 00:11:16.178" endtime="20220307 00:11:16.190"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:16.177" endtime="20220307 00:11:16.190"/>
+</kw>
+<kw name="Given Change the Category to Computers/Tablets &amp; Networking">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdownCategory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:16.191" level="INFO">Clicking element 'css:#gh-cat-box'.</msg>
+<status status="PASS" starttime="20220307 00:11:16.191" endtime="20220307 00:11:16.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220307 00:11:17.483" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220307 00:11:16.483" endtime="20220307 00:11:17.483"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${chooseComputerAndNetworking}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:17.484" level="INFO">Clicking element 'css:div#gh-cat-box .gh-sb [value="58058"]'.</msg>
+<status status="PASS" starttime="20220307 00:11:17.484" endtime="20220307 00:11:17.892"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220307 00:11:18.893" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220307 00:11:17.892" endtime="20220307 00:11:18.893"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:16.190" endtime="20220307 00:11:18.893"/>
+</kw>
+<kw name="When Click Search Button">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220307 00:11:18.896" level="INFO">Clicking button 'css:#gh-btn'.</msg>
+<status status="PASS" starttime="20220307 00:11:18.895" endtime="20220307 00:11:21.129"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:18.894" endtime="20220307 00:11:21.129"/>
+</kw>
+<kw name="Then Will Show Category Computers/Tablets &amp; Networking Search Result Page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${searchResult}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220307 00:11:21.130" endtime="20220307 00:11:21.192"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:21.129" endtime="20220307 00:11:21.192"/>
+</kw>
+<kw name="Close The Browser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220307 00:11:21.194" endtime="20220307 00:11:21.382"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:21.193" endtime="20220307 00:11:21.382"/>
+</kw>
+<status status="PASS" starttime="20220307 00:11:07.919" endtime="20220307 00:11:21.382"/>
+</test>
+<status status="PASS" starttime="20220307 00:11:07.507" endtime="20220307 00:11:21.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercise1 Scenario2">Exercise1 Scenario2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
